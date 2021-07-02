@@ -157,7 +157,7 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
 
 task prepareDockerNodes(type: net.corda.plugins.Dockerform, dependsOn: ['jar']) {
     // set docker image for each node
-    dockerImage = "corda/corda-zulu-java1.8-4.4"
+    dockerImage = "corda/corda-zulu-java1.8-4.8:latest"
 
     nodeDefaults  {
         cordapp project(':contracts')
@@ -203,5 +203,5 @@ task prepareDockerNodes(type: net.corda.plugins.Dockerform, dependsOn: ['jar']) 
     }
 
     // This property needs to be outside the node {...} elements
-    dockerImage = "corda/corda-zulu-java1.8-4.4"
+    dockerImage = "corda/corda-zulu-java1.8-4.8:latest"
 }
